@@ -7,7 +7,16 @@ import Close from '../../Close';
 const Navbar = (props) => (
 
     <nav>
-      <NavLink className="link" to="/"><img className="logo" src={logo} alt="" /></NavLink>
+      {/* <NavLink className="link" to="/"><img className="logo" src={logo} alt="" /></NavLink> */}
+      <div className='nav_flex'>
+        <div className='logoImage'><NavLink className="link" to="/"><img className="logo" src={logo} alt="" /></NavLink> </div>
+        <NavLink className="nav_link" activeClassName='current' to="/">Home</NavLink>
+        <div className='spanlink'>
+       
+        <NavLink className="nav_link" activeClassName='current' to="/signin">Login</NavLink>
+        <NavLink className="nav_link" activeClassName='current' to="/signup" >Signup</NavLink>
+        </div>
+      </div>
       <Hamburger />
       <Close />
       <ul className="nav-list">
